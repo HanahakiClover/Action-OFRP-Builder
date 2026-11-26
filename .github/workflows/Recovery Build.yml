@@ -20,6 +20,7 @@ on:
         options:
           - https://github.com/AzzyC/ofox_device_xiaomi_peridot
           - https://gitlab.com/OrangeFox/device/peridot_new
+          - https://gitlab.com/fleur-de-tr-fle/device_nothing_asteroids-recovery
 
       device_tree_branch:
         description: "Select Device Tree branch"
