@@ -16,10 +16,10 @@ on:
         description: "Select Device Tree repository"
         required: true
         type: choice
-        default: https://github.com/AzzyC/ofox_device_xiaomi_peridot
+        default: https://gitlab.com/fleur-de-tr-fle/device_nothing_asteroids-recovery
         options:
-          - https://github.com/AzzyC/ofox_device_xiaomi_peridot
-          - https://gitlab.com/OrangeFox/device/peridot_new
+          - https://github.com/HanahakiClover/device_nothing_asteroids-recovery
+          - https://gitlab.com/OrangeFox/device/nothing/asteroids
           - https://gitlab.com/fleur-de-tr-fle/device_nothing_asteroids-recovery
 
       device_tree_branch:
@@ -121,7 +121,7 @@ jobs:
       uses: actions/cache/restore@v4
       with:
         path: ${{ env.CCACHE_DIR }}
-        key: ${{ env.MANIFEST_BRANCH }}-peridot-ccache
+        key: ${{ env.MANIFEST_BRANCH }}-asteroids-ccache
       continue-on-error: true
 
     - name: Install OpenJDK
@@ -286,7 +286,7 @@ jobs:
       uses: actions/cache/save@v4
       with:
         path: ${{ env.CCACHE_DIR }}
-        key: ${{ env.MANIFEST_BRANCH }}-peridot-ccache
+        key: ${{ env.MANIFEST_BRANCH }}-asteroids-ccache
       continue-on-error: true
 
     - name: Upload to Release
